@@ -1,0 +1,6 @@
+Git é uma ferramenta de versionamento de código, que pode é usada nos terminais, seja ele qual for.	
+	- Sempre versione
+	- Trabalho em equipe
+Github é uma plataforma onde você coloca e guara seus projetos etc.
+	- Github organizado
+	- Com recorrência no desenvolvimento de projetos

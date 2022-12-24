@@ -1,0 +1,12 @@
+O que é uma API? 
+ Application Programming Interface
+- API, serve dados para nós ou para nosso servidor.
+
+APIs são mecanismos que permitem que dois componentes de software se comuniquem usando um conjunto de definições
+e protocolos.
+
+ Por exemplo, o sistema de software com instituto meteorológico contém dados meteorológicos diários, e isso é pego de uma Api. 
+
+A aplicação para a previsão do tempo em seu telefone por exemplo,
+“fala” com esse sistema por meio de APIs e mostra atualizações meteorológicas diárias no telefone.
+

@@ -1,0 +1,180 @@
+protocolo http = cliente e servidor
+
+- Passsos do protocolo HTTP 
+
+
+1. O cliente faz uma solicitação para o servidor.
+
+2. o servidor processa e entende o que foi pedido, e devolve uma resposta ao cliente.
+
+cliente no caso é o browser e o servidor o Google.
+
+--------------------------
+Porta e IP
+
+IP é o endereço do meu computador dentro da rede 
+Porta, é uma das aberturas do meu computador.
+	
+----------------------------------
+
+HTTP é um protocolo (protocol) que permite a obtenção de recursos,
+ > como documentos HTML.
+> É a base de qualquer troca de dados na Web e um protocolo
+ cliente-servidor, o que significa que as requisições são iniciadas pelo destinatário,
+ geralmente em um navegador da Web.
+> E nesta requisição é disponibilizado um documento completo é reconstruído a partir dos diferentes
+ sub-documentos obtidos, 
+como por exemplo texto, descrição do layout, imagens, vídeos, scripts e muito mais.
+ 
+
+	Montando uma requisição http : 
+
+1- url:  (https://pokeapi.co/api/v2/pokemon)
+	   $(IP=endereço) / $(path = caminho de identificacao do recurso)
+
+
+IP: https://pokeapi.co = dominio, que uma vez usado o protocolo converte para http
+
+	http://127.0.0.21:3000 = IP e PORTA
+
+- > Toda requisição para um recurso o metodo diz
+o que nos queremos fazer sobre esse recurso, 
+e os metodos são esses: 
+
+> Request method  : GET, POST, PUT, DELETE
+
+Toda requisição é feita em cima de um endereço IP ou dominio, e com 
+o path se identifica o recurso dito pelos métodos (Request method).
+
+GET = Buscar
+
+POST = Inserir
+
+PUT = Atualizar
+
+DELETE = Remover
+
+
+MÈTODO GET 
+
+
+Duas primeiras formas de passagem de parametro para api:
+PATH E QUERY STRING
+
+
+ID PATH:
+
+https://pokeapi.co/api/v2/pokemon/${id}
+
+QUERY STRING : 
+
+https://pokeapi.co/api/v2/pokemon?type=grass&name=i
+
+Type = grass
+name = i
+
+
+https://pokeapi.co/api/v2/pokemon?offset=20&limit=20
+
+parametrôs colocados pela query string
+
+offset = 20 - deslocamento da pagina, que dara as paginas de pokemons,pois sao cerca de 1000 pokemons
+limit = 20 - limite, que dara os dois primeiros pokemons
+
+
+Os headers sao uma especie de configuracao da nossa requisicao, aqui se
+passa dados que fazem sentido para a nossa requisicao = parametros
+
+como se fosse uma busca e que definisse parametros, como:
+
+text/html
+application/xhtml+xml
+application/xml;q=0.9
+image/avif
+image/webp
+iamge/apng
+*/*;q=0.9
+application/signed-exchange.v=0b3;q=0.9
+
+Response headers:
+
+Configuracao da nossa api
+	aceppt language:
+
+	pt-br;q=1
+pt-br = lingua
+q = 1 - prioridade
+
+	pt;q=0.9
+pt = lingua
+q = 0.9 - prioridade
+
+
+	en-US;q=0.8
+en:US = lingua
+q = 0.8 - prioridade
+
+	en;q=0.7
+en = lingua
+q = 0.7 - prioridade
+
+	gl;q=0.6
+
+gl-global = lingua
+q = 0.6 - prioridade
+
+
+Request headers:
+Como a nossa requisição está sendo configurada.
+
+Response request:
+È com a resposta está configurada.
+
+
+Recaptulando :
+>>>>>>>>>>>>
+
+URL da nossa requisição, onde podemos passar parametros no path ou na query string, e toda
+requisição tem um metodo que deve vir, e tem os headers que são a configuração da nossa requisição.
+
+>>>>>>>>>>>>>
+
+Dependo do metodo se tem o <BODY>
+ex: 
+
+Request headers com o metodo POST'
+	content-type: application/json
+
+Body
+{
+ 'name': 'pikachu'
+}
+
+
+Resposta do servidor STATUS CODE
+
+Que é um um numero que volta, e indica o 
+que aconteceu com a nossa requisicao.
+
+
+200-299 = sucesso
+
+300-399 = redirect
+
+400-499 = erro por parte do cliente
+
+500-599 = erro interno por parte do servidor
+
+
+Existem diversos números que indicam um estado, basta procurar pela WEB.
+
+
+o Status Code nos dira se deu certo 
+response header nos dira como essa resposta esta configurada
+e o body é a resposta em si 
+
+
+
+
+
+
